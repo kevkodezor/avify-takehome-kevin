@@ -49,6 +49,32 @@ export const Numbers = ({ data }: EnergyTilesProps) => {
                 })}
             </div>
 
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 shadow bg-white rounded-lg p-5'>
+                {sortedSources.map((source) => {
+                    const Icon = getEnergyIcon(source.type)
+                    const color = getEnergyColor(source.type)
+
+                    return (
+                        <div key={source.type} className='flex items-center gap-4'>
+                            <div className='p-3 rounded-full' style={{ backgroundColor: `${color}20` }}>
+                                <Icon className='h-6 w-6' style={{ color }} />
+                            </div>
+                            <div>
+                                <h3 className='font-medium text-gray-900 dark:text-white'>{source.type}</h3>
+                                <div className='flex flex-col sm:flex-row sm:items-baseline sm:gap-2'>
+                                    <span className='text-2xl font-bold' style={{ color }}>
+                                        {source.percentage.toFixed(1)}%
+                                    </span>
+                                    <span className='text-sm text-gray-500 dark:text-gray-400'>
+                                        {source.value.toLocaleString()} MW
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+
         </div>
     );
 }

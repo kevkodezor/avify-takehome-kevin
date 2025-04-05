@@ -78,7 +78,15 @@ export function Dasshboard () {
                 </div>
             )}
 
-            <Tabs aria-label='Options'>
+            <Tabs aria-label='Options' variant='underlined' color='secondary' 
+                classNames={{
+                    tabList: 'gap-5 w-full rounded-lg bg-white shadow-sm',
+                    cursor: 'bg-[#8b5cf6] w-full rounded-lg',
+                    tab: 'h-12 active:bg-[#8b5cf650] focus:bg-[#8b5cf620] rounded-sm',
+                    tabContent: 'group-data-[selected=true]:text-[#8b5cf6]'
+            }} 
+                fullWidth
+            >
                 <Tab key='all' title='All'>
                     <Energytiles data={energyData} />
                 </Tab>
