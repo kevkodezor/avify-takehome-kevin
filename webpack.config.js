@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const host = 'localhost';
-const port = 8080;
+// const host = 'localhost';
+// const port = 8080;
 
 module.exports = {
-  mode: "development",
+  // mode: 'development',
+  mode: "production",
   context: path.resolve(__dirname, "src"),
   target: "web",
   entry: {
@@ -14,9 +15,10 @@ module.exports = {
   },
   output: {
     filename: "[name]-[contenthash:6].bundle.js",
-    path: path.join(__dirname, "./build/www"),
+    // path: path.join(__dirname, "./build/www"),
+    path: path.join(__dirname, "build"),
     // publicPath: `http://${host}:${port}/`
-    publicPath: "https://avify-takehome-kevin.vercel.app/",
+    publicPath: "/",
   },
   resolve: {
     mainFields: ["browser", "module", "main"],
@@ -49,9 +51,9 @@ module.exports = {
       chunkFilename: "[id].css",
     }),
   ],
-  devServer: {
-    port,
-    host,
-    static: path.resolve(__dirname, "src"),
-  },
+  //   devServer: {
+  //     port,
+  //     host,
+  //     static: path.resolve(__dirname, "src"),
+  //   },
 };
