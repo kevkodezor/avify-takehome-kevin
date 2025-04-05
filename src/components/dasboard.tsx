@@ -8,6 +8,7 @@ import { Energy } from '../interfaces/energys';
 import { Energytiles } from './energy-tiles';
 import { Charts } from './charts';
 import { Bands } from './bands';
+import { Numbers } from './numbers';
 
 export function Dasshboard () {
 
@@ -88,7 +89,7 @@ export function Dasshboard () {
                     <Bands data={energyData} />
                 </Tab>
                 <Tab key='numbers' title='Numbers'>
-                    Numeros
+                    <Numbers data={energyData} />
                 </Tab>
             </Tabs>
 
