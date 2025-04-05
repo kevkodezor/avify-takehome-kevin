@@ -7,7 +7,7 @@ export async function fetchEnergy(): Promise<Energy> {
                 Accept: 'application/json',
             },
         })
-
+        
         if (!response.ok) {
             throw new Error(`API responded with status: ${response.status}`)
         }
