@@ -5,6 +5,7 @@
     "start": "webpack-dev-server --hot --progress"
   },
   "dependencies": {
+    "lucide-react": "^0.487.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
