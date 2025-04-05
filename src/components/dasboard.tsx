@@ -46,10 +46,10 @@ export function Dasshboard () {
             <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4'>
                 {lastUpdated && (
                     <div className='space-y-1'>
-                        <p className='text-sm text-gray-500 dark:text-gray-400'>Ultima actulizacion : {lastUpdated.toLocaleTimeString()}</p>
+                        <p className='text-sm text-gray-500 dark:text-gray-400'>Last update : {lastUpdated.toLocaleTimeString()}</p>
                         {energyData && (
                             <p className='text-sm text-gray-500 dark:text-gray-400'>
-                                Fecha: {new Date(energyData.timestamp).toLocaleString()}
+                                Date: {new Date(energyData.timestamp).toLocaleString()}
                             </p>
                         )}
                     </div>
