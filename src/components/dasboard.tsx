@@ -7,6 +7,7 @@ import { Energy } from '../interfaces/energys';
 
 import { Energytiles } from './energy-tiles';
 import { Charts } from './charts';
+import { Bands } from './bands';
 
 export function Dasshboard () {
 
@@ -53,7 +54,7 @@ export function Dasshboard () {
                         )}
                     </div>
                 )}
-                <button type='button' onClick={loadData} className='flex items-center gap-2 cursor-pointer shadow-sm p-2 rounded hover:shadow-md transition duration-200'>
+                <button type='button' onClick={loadData} className='flex items-center gap-2 bg-white cursor-pointer shadow-sm p-2 rounded hover:shadow-md transition duration-200'>
                     <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
                     <span className='text-sm text-gray-500 dark:text-gray-400 ml-2'>
                         {loading ? 'Actualizando' : 'Actualizar'}
@@ -77,16 +78,16 @@ export function Dasshboard () {
             )}
 
             <Tabs aria-label='Options'>
-                <Tab key='all' title='Todas'>
+                <Tab key='all' title='All'>
                     <Energytiles data={energyData} />
                 </Tab>
-                <Tab key='graphics' title='Grafica'>
+                <Tab key='graphics' title='Graphics'>
                     <Charts data={energyData} />
                 </Tab>
-                <Tab key='bands' title='Bandas'>
-                    Bandas
+                <Tab key='bands' title='Bands'>
+                    <Bands data={energyData} />
                 </Tab>
-                <Tab key='numbers' title='Numeros'>
+                <Tab key='numbers' title='Numbers'>
                     Numeros
                 </Tab>
             </Tabs>
