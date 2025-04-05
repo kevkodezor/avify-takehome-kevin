@@ -55,7 +55,7 @@ export function Dasshboard () {
                         )}
                     </div>
                 )}
-                <button type='button' onClick={loadData} className='flex items-center gap-2 bg-white cursor-pointer shadow-sm p-2 rounded hover:shadow-md transition duration-200'>
+                <button type='button' onClick={loadData} className='flex items-center gap-2 bg-white cursor-pointer shadow-sm p-2 px-4 rounded-lg hover:shadow-md transition duration-200'>
                     <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
                     <span className='text-sm text-gray-500 dark:text-gray-400 ml-2'>
                         {loading ? 'Actualizando' : 'Actualizar'}
@@ -80,7 +80,7 @@ export function Dasshboard () {
 
             <Tabs aria-label='Options' variant='underlined' color='secondary' 
                 classNames={{
-                    tabList: 'gap-5 w-full rounded-lg bg-white shadow-sm',
+                    tabList: 'gap-5 w-full rounded-lg bg-white shadow-sm my-4',
                     cursor: 'bg-[#8b5cf6] w-full rounded-lg',
                     tab: 'h-12 active:bg-[#8b5cf650] focus:bg-[#8b5cf620] rounded-sm',
                     tabContent: 'group-data-[selected=true]:text-[#8b5cf6]'

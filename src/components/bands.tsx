@@ -11,7 +11,7 @@ export const Bands = ({ data }: EnergyTilesProps) => {
     const sortedSources = [...data.sources].sort((a, b) => b.percentage - a.percentage);
 
     return (
-        <div className='space-y-8'>
+        <div className='space-y-8 shadow bg-white rounded-lg p-5'>
             <div className='h-24 md:h-32 w-full flex rounded-lg overflow-hidden'>
                 {sortedSources.map((source) => (
                     <div

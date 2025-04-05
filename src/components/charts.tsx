@@ -36,7 +36,7 @@ export const Charts = ({ data }: EnergyTilesProps) => {
     }
 
     return (
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width='100%' height='70%' className='shadow bg-white rounded-lg p-5'>
             <BarChart data={chartData} layout='vertical' margin={{ top: 5, right: 30, left: 80, bottom: 5 }}>
                 <XAxis type='number' />
                 <YAxis type='category' dataKey='name' width={80} />
